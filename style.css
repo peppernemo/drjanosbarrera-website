@@ -1232,6 +1232,34 @@ footer {
   margin-top: var(--space-md);
 }
 
+.pr-illustration {
+  margin: var(--space-md) 0 var(--space-lg);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.pr-illustration img {
+  max-width: 100%;
+  height: auto;
+  max-height: 360px;
+  display: inline-block;
+}
+
+.pr-illustration figcaption {
+  margin-top: var(--space-sm);
+  font-size: var(--text-small);
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.pr-illustration figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+}
+
 /* Landing page grid */
 .pr-landing-grid {
   display: grid;
