@@ -140,7 +140,12 @@ h1, h2, h3, h4 {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-md);
+  margin-left: var(--space-lg);
+}
+
+.nav-links li {
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -1374,21 +1379,26 @@ footer {
 
 
 /* ----------------------------------------------------------
-   15. RESPONSIVE — MOBILE (≤600px)
+   15. RESPONSIVE — NAV COLLAPSE (≤900px)
    ---------------------------------------------------------- */
-@media (max-width: 600px) {
-  :root {
-    --space-xl:  3.5rem;
-    --space-2xl: 5rem;
-  }
-
-  /* Show hamburger, hide desktop nav */
+@media (max-width: 900px) {
+  /* Show hamburger, hide desktop nav at tablet widths too */
   .hamburger {
     display: flex;
   }
 
   .nav-links {
     display: none;
+  }
+}
+
+/* ----------------------------------------------------------
+   15b. RESPONSIVE — MOBILE (≤600px)
+   ---------------------------------------------------------- */
+@media (max-width: 600px) {
+  :root {
+    --space-xl:  3.5rem;
+    --space-2xl: 5rem;
   }
 
   /* Hero */
