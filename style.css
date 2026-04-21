@@ -1350,9 +1350,22 @@ footer {
 
 .pr-footer {
   background: var(--color-surface);
+  color: var(--color-text);
   border-top: 1px solid var(--color-border);
   padding: var(--space-lg) 0;
   margin-top: var(--space-lg);
+}
+
+.pr-office-list {
+  list-style: none;
+  padding: 0;
+  color: var(--color-text);
+}
+
+.pr-office-list li {
+  color: var(--color-text);
+  font-size: var(--text-small);
+  margin-bottom: 0.25rem;
 }
 
 .pr-footer-inner {
