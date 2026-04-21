@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body>
 
@@ -59,6 +60,16 @@
           <li>Kontakte youn nan sant tès EMG ki nan lis anba a pou pwograme tès ou.</li>
           <li>Si ou gen difikilte pou pwograme randevou, rele biwo nou nan <a href="tel:+16465014950">646-501-4950</a>. Nou pral fè tout sa nou kapab pou ede ou.</li>
         </ul>
+      </section>
+
+      <section class="pr-map-section">
+        <h2>Kat kote yo</h2>
+        <p>Biwo Dr. Barrera yo parèt an ble. Sant tès EMG yo parèt an vèt. Klike sou nenpòt pin pou detay ak direksyon.</p>
+        <div class="pr-map-wrap"><div id="pr-map" role="img" aria-label="Kat biwo Dr. Barrera yo ak sant tès EMG yo"></div></div>
+        <div class="pr-map-legend">
+          <span class="pr-map-legend-item"><span class="pr-map-dot office"></span> Biwo Dr. Barrera</span>
+          <span class="pr-map-legend-item"><span class="pr-map-dot emg"></span> Kote EMG</span>
+        </div>
       </section>
 
       <section>
@@ -142,5 +153,9 @@
 
   </main>
 
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PR_MAP_DATA={offices:[{"n":"NYU Langone Laurelton","a":"228-02 Merrick Blvd, Laurelton, NY 11413","p":"646-501-4950","c":[40.67662,-73.74215]},{"n":"NYU Orthopedic, Woodside","a":"53-14 Roosevelt Ave, Woodside, NY 11377","p":"646-501-4950","c":[40.74584,-73.90096]},{"n":"Axel Office, Richmond Hill","a":"134-20 Jamaica Ave, Richmond Hill, NY 11418","p":"646-501-4950","c":[40.69973,-73.83199]},{"n":"ACC, Jamaica","a":"132-47 Metropolitan Ave, Jamaica, NY 11418","p":"646-501-4950","c":[40.70293,-73.81867]}],points:[{"n":"Kiril Kiprovski, MD (NYU Neurology, Manhattan)","a":"222 E 41st St, New York, NY 10017","p":"","c":[40.7493,-73.9741]},{"n":"Strizhak/Pinkhasova (NYU Rego Park)","a":"97-85 Queens Blvd, Rego Park, NY 11374","p":"(718) 261-9100","c":[40.72894,-73.85824]},{"n":"Patrick Kwon, MD (NYU Brooklyn)","a":"8714 5th Ave, Brooklyn, NY 11209","p":"(718) 630-8600","c":[40.62058,-74.02732]},{"n":"Nandakumar Thambirajah, MD (JHMC)","a":"134-20 Jamaica Ave, Jamaica, NY 11418","p":"(718) 206-6742","c":[40.70037,-73.8165]},{"n":"Hands-On EMG, Astoria (31st St)","a":"32-44 31st St, Astoria, NY 11106","p":"","c":[40.76096,-73.92629]},{"n":"Hands-On EMG, Queens Village","a":"220-01 Jamaica Ave, Queens Village, NY 11428","p":"","c":[40.7278,-73.70814]},{"n":"Hands-On EMG, Astoria (38th St)","a":"30-10 38th St, Astoria, NY 11103","p":"","c":[40.764,-73.9161]},{"n":"Hands-On EMG, Astoria (33rd St)","a":"36-36 33rd St, Astoria, NY 11106","p":"","c":[40.75522,-73.92874]},{"n":"Hands-On EMG, Elmhurst","a":"87-09 Justice Ave, Elmhurst, NY 11373","p":"","c":[40.73605,-73.87231]},{"n":"Hands-On EMG, Forest Hills","a":"71-60 Yellowstone Blvd, Forest Hills, NY 11375","p":"","c":[40.72123,-73.8553]},{"n":"Hands-On EMG, Jamaica","a":"165-50 Baisley Blvd, Jamaica, NY 11434","p":"","c":[40.67915,-73.77805]},{"n":"Hands-On EMG, Hicksville (Jerusalem Ave 337)","a":"337 Jerusalem Ave, Hicksville, NY 11801","p":"","c":[40.75458,-73.52017]},{"n":"Hands-On EMG, West Hempstead","a":"354 Hempstead Ave, West Hempstead, NY 11552","p":"","c":[40.69928,-73.65111]},{"n":"Hands-On EMG, Centereach","a":"1788 Middle Country Rd, Centereach, NY 11720","p":"","c":[40.85972,-73.07592]},{"n":"Hands-On EMG, Huntington Station","a":"33 Walt Whitman Rd, Huntington Station, NY 11746","p":"","c":[40.83062,-73.41297]},{"n":"Hands-On EMG, Plainview","a":"2 Hope Dr, Plainview, NY 11803","p":"","c":[40.77622,-73.46872]},{"n":"Hands-On EMG, Hicksville (N Broadway)","a":"265 N Broadway, Hicksville, NY 11801","p":"","c":[40.77757,-73.52907]},{"n":"Hands-On EMG, New Hyde Park","a":"1605 Hillside Ave, New Hyde Park, NY 11040","p":"","c":[40.74846,-73.68515]},{"n":"Hands-On EMG, Hicksville (Jerusalem Ave 341)","a":"341 Jerusalem Ave, Hicksville, NY 11801","p":"","c":[40.7545,-73.52014]},{"n":"Hands-On EMG, Manhattan (E 32nd)","a":"160 E 32nd St, New York, NY 10016","p":"","c":[40.74458,-73.97999]},{"n":"Hands-On EMG, Manhattan (Lexington)","a":"1990 Lexington Ave, New York, NY 10035","p":"","c":[40.8023,-73.93914]},{"n":"Hands-On EMG, Manhattan (W 160th)","a":"564 W 160th St, New York, NY 10032","p":"","c":[40.83562,-73.94303]},{"n":"Hands-On EMG, Manhattan (W 161st)","a":"577 W 161st St, New York, NY 10032","p":"","c":[40.83649,-73.94231]},{"n":"Hands-On EMG, Manhattan (W 185th)","a":"639 W 185th St, New York, NY 10033","p":"","c":[40.85245,-73.93345]}],pointType:"emg",labels:{"office":"Biwo Dr. Barrera","point":"Kote EMG","call":"Rele","directions":"Direksyon"}};</script>
+  <script src="../pr-map.js" defer></script>
 </body>
 </html>

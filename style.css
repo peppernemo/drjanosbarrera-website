@@ -1449,3 +1449,55 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* Patient resources: Leaflet map */
+.pr-map-section {
+  margin: var(--space-md) 0;
+}
+
+.pr-map-wrap {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 58, 92, 0.12);
+  background: #eef1f4;
+}
+
+#pr-map {
+  width: 100%;
+  height: 100%;
+}
+
+.pr-map-legend {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.pr-map-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pr-map-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+}
+
+.pr-map-dot.office { background: #1B3A5C; }
+.pr-map-dot.therapy { background: #D97706; }
+.pr-map-dot.emg { background: #059669; }
+
+.pr-map-popup strong { display: block; margin-bottom: 2px; }
+.pr-map-popup a { color: var(--color-accent, #1B3A5C); }
