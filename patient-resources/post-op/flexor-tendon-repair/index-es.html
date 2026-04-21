@@ -18,14 +18,37 @@
 </head>
 <body>
 
-  <nav id="main-nav" aria-label="Navegación principal">
+  <nav id="main-nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="../../../" class="nav-logo">Dr. Janos Barrera</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <ul class="nav-links" role="list">
-        <li><a href="../../../#about">Información</a></li>
-        <li><a href="../../../#expertise">Especialidades</a></li>
-        <li><a href="../../../#appointments">Citas</a></li>
-        <li><a href="../../" style="color: var(--color-accent);">Recursos</a></li>
+        <li><a href="../../../#about">About</a></li>
+        <li><a href="../../../#expertise">Expertise</a></li>
+        <li><a href="../../../#procedures">Procedures</a></li>
+        <li><a href="../../../#research">Research</a></li>
+        <li><a href="../../../#appointments">Appointments</a></li>
+        <li><a href="../../" style="color: var(--color-accent);">Patient Resources</a></li>
+        <li><a href="../../../#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true" hidden>
+      <ul role="list">
+        <li><a href="../../../#about">About</a></li>
+        <li><a href="../../../#expertise">Expertise</a></li>
+        <li><a href="../../../#procedures">Procedures</a></li>
+        <li><a href="../../../#research">Research</a></li>
+        <li><a href="../../../#appointments">Appointments</a></li>
+        <li><a href="../../" style="color: var(--color-accent);">Patient Resources</a></li>
+        <li><a href="../../../#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -150,5 +173,6 @@
 
   </main>
 
+  <script src="../../../script.js"></script>
 </body>
 </html>
