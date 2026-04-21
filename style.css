@@ -323,6 +323,43 @@ section {
   padding: var(--space-2xl) var(--space-md) var(--space-xl);
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  max-width: 440px;
+  justify-self: end;
+  width: 100%;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+  filter: grayscale(10%) contrast(1.02);
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .hero-photo {
+    order: -1;
+    max-width: 280px;
+    justify-self: center;
+  }
 }
 
 .hero-eyebrow {
@@ -361,13 +398,13 @@ section {
 /* Decorative SVG */
 .hero-decor {
   position: absolute;
-  right: -5vw;
+  right: -10vw;
   top: 50%;
   transform: translateY(-50%);
-  width: min(600px, 55vw);
-  opacity: 0.6;
+  width: min(520px, 50vw);
+  opacity: 0.25;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero-scroll-hint {
@@ -463,10 +500,12 @@ section {
    7. ABOUT
    ---------------------------------------------------------- */
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: var(--space-2xl);
-  align-items: start;
+  display: block;
+}
+
+.about-grid .about-bio {
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .about-photo-wrap {
