@@ -1048,59 +1048,6 @@ footer {
   border-color: rgba(255,255,255,0.3);
 }
 
-.footer-contact {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--space-md) var(--space-md);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.footer-contact-label {
-  font-size: var(--text-small);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(248, 247, 244, 0.5);
-  margin-bottom: var(--space-sm);
-}
-
-.footer-phone-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-sm);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
-}
-
-.footer-phone-list li {
-  font-size: 0.9rem;
-  color: rgba(248, 247, 244, 0.7);
-  line-height: 1.5;
-}
-
-.footer-phone-list strong {
-  color: var(--color-bg);
-  font-weight: 500;
-}
-
-.footer-phone-list a {
-  color: rgba(248, 247, 244, 0.85);
-  font-weight: 500;
-}
-
-.footer-phone-list a:hover {
-  color: var(--color-bg);
-  text-decoration: underline;
-}
-
-.footer-emergency {
-  font-size: var(--text-small);
-  color: rgba(248, 247, 244, 0.6);
-  font-weight: 500;
-  margin: 0;
-}
-
 .footer-bottom {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -1678,10 +1625,6 @@ footer {
   .footer-bottom {
     flex-direction: column;
     gap: var(--space-xs);
-  }
-
-  .footer-phone-list {
-    grid-template-columns: 1fr 1fr;
   }
 
   /* Credential badges */
