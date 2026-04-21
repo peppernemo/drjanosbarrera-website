@@ -740,6 +740,57 @@ section {
 
 
 /* ----------------------------------------------------------
+   10b. PATIENT RESOURCES CALLOUT
+   ---------------------------------------------------------- */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.resource-card {
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  color: var(--color-text);
+}
+
+.resource-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 32px rgba(27, 58, 92, 0.08);
+  transform: translateY(-2px);
+}
+
+.resource-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.resource-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+}
+
+.resource-card p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+
+/* ----------------------------------------------------------
    11. APPOINTMENTS
    ---------------------------------------------------------- */
 .appointments-inner {
@@ -813,6 +864,39 @@ section {
 
 .location-phone:hover {
   text-decoration: underline;
+}
+
+.appointments-header {
+  max-width: 720px;
+  margin-bottom: var(--space-lg);
+}
+
+.offices-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.office-alt-name {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: -0.35rem !important;
+  margin-bottom: 0.65rem !important;
+}
+
+.office-contact {
+  margin-top: 0.75rem !important;
+  color: var(--color-text) !important;
+}
+
+.office-contact a {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.office-contact a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .offices-grid { grid-template-columns: 1fr; }
 }
 
 
@@ -907,6 +991,59 @@ footer {
   border-color: rgba(255,255,255,0.3);
 }
 
+.footer-contact {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-md);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-contact-label {
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(248, 247, 244, 0.5);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-phone-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-sm);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.footer-phone-list li {
+  font-size: 0.9rem;
+  color: rgba(248, 247, 244, 0.7);
+  line-height: 1.5;
+}
+
+.footer-phone-list strong {
+  color: var(--color-bg);
+  font-weight: 500;
+}
+
+.footer-phone-list a {
+  color: rgba(248, 247, 244, 0.85);
+  font-weight: 500;
+}
+
+.footer-phone-list a:hover {
+  color: var(--color-bg);
+  text-decoration: underline;
+}
+
+.footer-emergency {
+  font-size: var(--text-small);
+  color: rgba(248, 247, 244, 0.6);
+  font-weight: 500;
+  margin: 0;
+}
+
 .footer-bottom {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -994,7 +1131,8 @@ footer {
    ---------------------------------------------------------- */
 @media (max-width: 900px) {
   .expertise-grid,
-  .research-grid {
+  .research-grid,
+  .resources-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1449,6 +1587,7 @@ footer {
   /* Grids → single column */
   .expertise-grid,
   .research-grid,
+  .resources-grid,
   .procedures-grid {
     grid-template-columns: 1fr;
   }
@@ -1482,6 +1621,10 @@ footer {
   .footer-bottom {
     flex-direction: column;
     gap: var(--space-xs);
+  }
+
+  .footer-phone-list {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* Credential badges */

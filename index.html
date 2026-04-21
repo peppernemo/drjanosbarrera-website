@@ -360,13 +360,13 @@
 
     <!-- ==================== APPOINTMENTS ==================== -->
     <section id="appointments" aria-labelledby="appointments-heading">
-      <div class="section-inner appointments-inner reveal">
-        <div class="appointments-content">
+      <div class="section-inner reveal">
+        <div class="appointments-header">
           <p class="section-label">Appointments</p>
           <h2 id="appointments-heading">Schedule a Consultation</h2>
           <p class="body-text">
-            Dr. Barrera sees patients at multiple locations across New York City.
-            New and established patients may request appointments online or by phone.
+            Dr. Barrera sees patients at four locations across Queens. New and established
+            patients may request appointments online or call the office directly.
           </p>
           <div class="appointments-actions">
             <a
@@ -378,38 +378,75 @@
           </div>
         </div>
 
-        <div class="locations">
-          <h3 class="locations-title">Offices</h3>
-          <ul class="location-list" role="list">
-            <li class="location-item">
-              <span class="location-text">
-                <span class="location-name">NYU Langone Laurelton</span>
-                <span class="location-system">228-02 Merrick Blvd, Laurelton</span>
-              </span>
-              <a class="location-phone" href="tel:+16465014950">646-501-4950</a>
-            </li>
-            <li class="location-item">
-              <span class="location-text">
-                <span class="location-name">NYU Langone Orthopedic, Woodside</span>
-                <span class="location-system">53-14 Roosevelt Ave, Woodside</span>
-              </span>
-              <a class="location-phone" href="tel:+19294293222">929-429-3222</a>
-            </li>
-            <li class="location-item">
-              <span class="location-text">
-                <span class="location-name">Axel Office (Richmond Hill)</span>
-                <span class="location-system">134-20 Jamaica Ave, Richmond Hill</span>
-              </span>
-              <a class="location-phone" href="tel:+17182066923">718-206-6923</a>
-            </li>
-            <li class="location-item">
-              <span class="location-text">
-                <span class="location-name">Jamaica Hospital ACC</span>
-                <span class="location-system">132-47 Metropolitan Ave, Jamaica</span>
-              </span>
-              <a class="location-phone" href="tel:+17183010720">718-301-0720</a>
-            </li>
-          </ul>
+        <div class="pr-landing-grid offices-grid">
+          <div class="pr-card">
+            <p class="pr-card-label">Laurelton</p>
+            <h3>NYU Langone Laurelton Medical</h3>
+            <p>228-02 Merrick Boulevard<br />Laurelton, NY 11413</p>
+            <p class="office-contact"><strong>Phone:</strong> <a href="tel:+16465014950">646-501-4950</a><br /><strong>Fax:</strong> 929-455-9604</p>
+          </div>
+          <div class="pr-card">
+            <p class="pr-card-label">Woodside</p>
+            <h3>NYU Langone Orthopedic Surgery</h3>
+            <p class="office-alt-name">also Ortho MediSys</p>
+            <p>53-14 Roosevelt Avenue, Suite 201<br />Woodside, NY 11377</p>
+            <p class="office-contact"><strong>Phone:</strong> <a href="tel:+19294293222">929-429-3222</a><br /><strong>Fax:</strong> 929-429-3211</p>
+          </div>
+          <div class="pr-card">
+            <p class="pr-card-label">Richmond Hill</p>
+            <h3>NYU Langone Orthopedic Surgery</h3>
+            <p class="office-alt-name">also Ortho MediSys</p>
+            <p>Axel Building<br />134-20 Jamaica Avenue<br />Richmond Hill, NY 11418</p>
+            <p class="office-contact"><strong>Phone:</strong> <a href="tel:+17182066923">718-206-6923</a><br /><strong>Fax:</strong> 718-206-8675</p>
+          </div>
+          <div class="pr-card">
+            <p class="pr-card-label">Jamaica</p>
+            <h3>Jamaica Hospital Ambulatory Care Center (ACC)</h3>
+            <p>132-47 Metropolitan Avenue<br />Jamaica, NY 11418</p>
+            <p class="office-contact"><strong>Phone:</strong> <a href="tel:+17183010720">718-301-0720</a><br /><strong>Fax:</strong> 718-301-0769</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PATIENT RESOURCES CALLOUT ==================== -->
+    <section id="resources" class="section-alt" aria-labelledby="resources-heading">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <p class="section-label">For Patients</p>
+          <h2 id="resources-heading">Patient Resources Library</h2>
+          <p class="section-intro">
+            Plain-language guides to common hand conditions, scheduling hand therapy
+            and nerve studies, after-surgery care, and printable handouts.
+            Available in English, Spanish, and Kreyòl.
+          </p>
+        </div>
+
+        <div class="resources-grid">
+          <a href="patient-resources/" class="resource-card reveal">
+            <p class="resource-label">Conditions</p>
+            <h3>17 Common Hand Conditions</h3>
+            <p>Carpal tunnel, trigger finger, fractures, nerve injuries, tendon injuries, and more.</p>
+            <span class="card-link">Browse conditions →</span>
+          </a>
+          <a href="patient-resources/#after-surgery" class="resource-card reveal delay-1">
+            <p class="resource-label">After Surgery</p>
+            <h3>Post-Operative Instructions</h3>
+            <p>Dressing care, activity restrictions, and follow-up for five common procedures.</p>
+            <span class="card-link">View instructions →</span>
+          </a>
+          <a href="patient-resources/hand-therapy/" class="resource-card reveal delay-2">
+            <p class="resource-label">Scheduling</p>
+            <h3>Hand Therapy &amp; EMG</h3>
+            <p>How to schedule certified hand therapy or a nerve conduction study.</p>
+            <span class="card-link">See locations →</span>
+          </a>
+          <a href="patient-resources/patient-handout-welcome.pdf" class="resource-card reveal delay-3">
+            <p class="resource-label">Printable</p>
+            <h3>Handout PDFs</h3>
+            <p>Welcome, common conditions, post-op care, and office contact information.</p>
+            <span class="card-link">Download PDFs →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -475,6 +512,17 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <div class="footer-contact">
+      <p class="footer-contact-label">Office Phone Numbers</p>
+      <ul class="footer-phone-list" role="list">
+        <li><strong>NYU Langone, Laurelton</strong><br /><a href="tel:+16465014950">646-501-4950</a></li>
+        <li><strong>NYU Orthopedic, Woodside</strong><br /><a href="tel:+19294293222">929-429-3222</a></li>
+        <li><strong>NYU Orthopedic, Richmond Hill</strong><br /><a href="tel:+17182066923">718-206-6923</a></li>
+        <li><strong>Jamaica Hospital ACC</strong><br /><a href="tel:+17183010720">718-301-0720</a></li>
+      </ul>
+      <p class="footer-emergency">For medical emergencies, call 911.</p>
     </div>
 
     <div class="footer-bottom">
