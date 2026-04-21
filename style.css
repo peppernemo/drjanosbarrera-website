@@ -934,6 +934,24 @@ section {
 
 .office-contact a:hover { text-decoration: underline; }
 
+.office-booking {
+  margin-top: 0.75rem !important;
+  font-size: 0.9rem;
+}
+
+.office-booking a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(27, 58, 92, 0.25);
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease;
+}
+
+.office-booking a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
 @media (max-width: 700px) {
   .offices-grid { grid-template-columns: 1fr; }
 }
