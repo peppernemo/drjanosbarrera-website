@@ -214,13 +214,20 @@ h1, h2, h3, h4 {
 /* Mobile overlay */
 .mobile-menu {
   position: fixed;
-  inset: 0;
-  background: var(--color-bg);
-  z-index: 90;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F8F7F4;
+  z-index: 150;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+  padding: var(--space-lg) var(--space-md);
 }
 
 .mobile-menu[hidden] {
