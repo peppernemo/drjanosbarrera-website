@@ -1430,6 +1430,62 @@ footer {
   text-decoration-color: var(--color-border);
 }
 
+.pr-illustration .pr-credit {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  opacity: 0.7;
+  letter-spacing: 0.02em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.pr-figures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.pr-figures .pr-illustration {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.pr-figures .pr-illustration img {
+  max-height: 640px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.pr-illustration.pr-figure-single {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.pr-illustration.pr-figure-single img {
+  max-height: 560px;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 720px) {
+  .pr-figures {
+    grid-template-columns: 1fr;
+  }
+  .pr-figures .pr-illustration img {
+    max-height: 520px;
+  }
+  .pr-illustration.pr-figure-single img {
+    max-height: 420px;
+  }
+}
+
 /* Landing page grid */
 .pr-landing-grid {
   display: grid;
