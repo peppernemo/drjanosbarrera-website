@@ -635,6 +635,38 @@ section {
   color: var(--color-text);
 }
 
+.affiliations {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+}
+
+.affiliations img {
+  height: 44px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(0%);
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
+}
+
+.affiliations img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .affiliations {
+    gap: var(--space-md);
+  }
+  .affiliations img {
+    height: 36px;
+  }
+}
+
 
 /* ----------------------------------------------------------
    8. EXPERTISE
