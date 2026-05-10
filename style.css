@@ -638,14 +638,14 @@ section {
 .affiliations {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
+  flex-wrap: nowrap;
+  gap: var(--space-md);
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
 }
 
 .affiliations img {
-  height: 80px;
+  height: 64px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -660,10 +660,10 @@ section {
 
 @media (max-width: 600px) {
   .affiliations {
-    gap: var(--space-md);
+    gap: 1.25rem;
   }
   .affiliations img {
-    height: 60px;
+    height: 44px;
   }
 }
 
