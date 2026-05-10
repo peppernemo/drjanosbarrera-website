@@ -645,7 +645,7 @@ section {
 }
 
 .affiliations img {
-  height: 44px;
+  height: 80px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -663,7 +663,7 @@ section {
     gap: var(--space-md);
   }
   .affiliations img {
-    height: 36px;
+    height: 60px;
   }
 }
 
