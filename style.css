@@ -654,6 +654,10 @@ section {
   transition: opacity 0.2s ease;
 }
 
+.affiliations img[src*="abps"] {
+  height: 76px;
+}
+
 .affiliations img:hover {
   opacity: 1;
 }
@@ -664,6 +668,9 @@ section {
   }
   .affiliations img {
     height: 36px;
+  }
+  .affiliations img[src*="abps"] {
+    height: 62px;
   }
 }
 
