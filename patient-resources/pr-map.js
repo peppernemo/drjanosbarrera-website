@@ -31,7 +31,9 @@
   }
 
   var officeIcon = makeIcon('#1B3A5C', 20);
-  var pointColor = data.pointType === 'emg' ? '#059669' : '#D97706';
+  var pointColor = data.pointType === 'emg' ? '#059669'
+                 : data.pointType === 'imaging' ? '#7C3AED'
+                 : '#D97706';
   var pointIcon = makeIcon(pointColor, 14);
 
   function popupHtml(item, tag) {

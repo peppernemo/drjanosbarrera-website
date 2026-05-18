@@ -1526,6 +1526,10 @@ footer {
   margin: var(--space-lg) 0;
 }
 
+.pr-landing-grid.pr-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .pr-card {
   padding: var(--space-md);
   background: var(--color-surface);
@@ -1786,6 +1790,7 @@ footer {
 .pr-map-dot.office { background: #1B3A5C; }
 .pr-map-dot.therapy { background: #D97706; }
 .pr-map-dot.emg { background: #059669; }
+.pr-map-dot.imaging { background: #7C3AED; }
 
 .pr-map-popup strong { display: block; margin-bottom: 2px; }
 .pr-map-popup a { color: var(--color-accent, #1B3A5C); }

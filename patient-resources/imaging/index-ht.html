@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kijan pou pwograme yon MRI, iltrason, oswa CT — pasyan Dr. Janos Barrera." />
+  <title>Imajri (MRI / Iltrason / CT) | Janos Barrera MD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css?v=map1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-H-yWrW2Xof4cVugH_G9Eg.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+
+  <nav id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../../" class="nav-logo">Dr. Janos Barrera</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#expertise">Expertise</a></li>
+        <li><a href="../../#procedures">Procedures</a></li>
+        <li><a href="../../#research">Research</a></li>
+        <li><a href="../../#appointments">Appointments</a></li>
+        <li><a href="../" style="color: var(--color-accent);">Patient Resources</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true" hidden>
+      <ul role="list">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#expertise">Expertise</a></li>
+        <li><a href="../../#procedures">Procedures</a></li>
+        <li><a href="../../#research">Research</a></li>
+        <li><a href="../../#appointments">Appointments</a></li>
+        <li><a href="../" style="color: var(--color-accent);">Patient Resources</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="pr-page">
+
+    <div class="pr-header">
+      <a href="../" class="pr-back">← Resous pou pasyan</a>
+      <div class="pr-lang-group">
+        <a href="index.html">EN</a>
+        <a href="index-es.html">ES</a>
+        <a href="index-ht.html" class="active">Kreyòl</a>
+      </div>
+    </div>
+
+    <div class="pr-hero">
+      <p class="pr-eyebrow">Imajri</p>
+      <h1>Kijan pou pwograme egzamen imajri ou</h1>
+      <p class="pr-subtitle">MRI, iltrason, ak CT bay doktè ou yon vi detaye sou zo, nè, ak tisi mou nan men ak bra ou.</p>
+    </div>
+
+    <div class="pr-content">
+
+      <section>
+        <h2>Ki kalite imajri ki egziste?</h2>
+        <ul>
+          <li><strong>MRI (Imajri Rezonans Mayetik):</strong> sèvi ak yon ayman pou kreye foto detaye tisi mou yo — nè, tandon, ligaman, ak pleksis brakyal la. Souvan itilize pou doulè san eksplikasyon, sispèk yon dechiriman tandon oswa ligaman, evalyasyon mas, ak konpresyon nè ki pa byen wè sou lòt tès.</li>
+          <li><strong>Iltrason:</strong> sèvi ak vag son pou gade estrikti sou sifas la an tan reyèl. Itil pou nè, tandon, koleksyon likid, ak ti mas. Pa fè mal e li rapid.</li>
+          <li><strong>CT (Tomografi Konpitè):</strong> sèvi ak reyon X pou bati yon foto twa dimansyon zo a. Souvan itilize pou frakti konplèks, sispèk yon non-inyon scaphoid, oswa planifikasyon chirijikal.</li>
+        </ul>
+        <p>Dr. Barrera ap di ou ki kalite imajri li mande ak poukisa. Ou dwe gen yon òd ekri anvan ou pwograme.</p>
+      </section>
+
+      <section>
+        <h2>Kijan pou pwograme randevou an</h2>
+        <ul>
+          <li>Ou dwe gen yon òd ekri Dr. Barrera anvan ou pwograme.</li>
+          <li>Chwazi yon rezo imajri anba a epi rele liy pwogramasyon pou rejyon ou.</li>
+          <li>Si ou gen difikilte pou pwograme, rele biwo nou nan <a href="tel:+16465014950">646-501-4950</a>. Nou pral fè tout sa nou kapab pou ede ou.</li>
+        </ul>
+      </section>
+
+      <section class="pr-map-section">
+        <h2>Kat kote yo</h2>
+        <p>Biwo Dr. Barrera yo parèt an ble. Sant imajri yo parèt an mov. Klike sou nenpòt pin pou detay ak direksyon.</p>
+        <div class="pr-map-wrap"><div id="pr-map" role="img" aria-label="Kat biwo Dr. Barrera yo ak sant imajri yo"></div></div>
+        <div class="pr-map-legend">
+          <span class="pr-map-legend-item"><span class="pr-map-dot office"></span> Biwo Dr. Barrera</span>
+          <span class="pr-map-legend-item"><span class="pr-map-dot imaging"></span> Sant imajri</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Sant imajri</h2>
+
+        <div class="pr-location-group">
+          <h3>NYU Langone Imaging</h3>
+          <p>Pasyan NYU yo ka pwograme anpil egzamen pou kont yo nan aplikasyon NYU Langone Health la. Pou pwograme pa telefòn, rele liy pou rejyon ou:</p>
+          <ul>
+            <li><strong>Manhattan</strong> · <a href="tel:+12122638868">212-263-8868</a></li>
+            <li><strong>Brooklyn</strong> · <a href="tel:+19294553100">929-455-3100</a></li>
+            <li><strong>Queens ak Long Island</strong> · <a href="tel:+15162222022">516-222-2022</a></li>
+            <li><strong>NYU Langone Hospital—Suffolk</strong> · <a href="tel:+16316547448">631-654-7448</a></li>
+            <li><strong>Staten Island</strong> · <a href="tel:+17186056500">718-605-6500</a></li>
+          </ul>
+          <p>Kèk kote chwazi parèt sou kat la. Gade <a href="https://nyulangone.org/care-services/imaging-radiology/how-to-schedule-an-imaging-appointment" target="_blank" rel="noopener">NYU Langone Imaging →</a> pou lis konplè a.</p>
+        </div>
+
+        <div class="pr-location-group">
+          <h3>Lenox Hill Radiology (RadNet / ACPNY)</h3>
+          <p>Yon gwo rezo nan Manhattan, Queens, Brooklyn, ak Long Island. Mande yon randevou sou entènèt oswa rele liy pou rejyon ou:</p>
+          <ul>
+            <li><strong>Demann randevou sou entènèt</strong> · <a href="https://www.radnet.com/lhr-acpny/for-patients/request-appointment" target="_blank" rel="noopener">radnet.com/lhr-acpny/for-patients/request-appointment</a></li>
+            <li><strong>Manhattan</strong> · <a href="tel:+12127723111">(212) 772-3111</a></li>
+            <li><strong>Queens</strong> · <a href="tel:+17185445151">(718) 544-5151</a></li>
+            <li><strong>Brooklyn</strong> · <a href="tel:+17182827000">(718) 282-7000</a></li>
+            <li><strong>Long Island</strong> · <a href="tel:+16312771600">(631) 277-1600</a></li>
+          </ul>
+
+          <p style="margin-top: 1rem;"><strong>Kote nan Queens tou pre biwo nou yo</strong></p>
+          <ul>
+            <li>ACPNY Laurelton · 231-35 Merrick Boulevard, Laurelton, NY 11413</li>
+            <li>Forest Hills · 96-10 Metropolitan Avenue, Forest Hills, NY 11375</li>
+            <li>Jamaica Estates · 88-08 179th Street, Jamaica, NY 11432</li>
+            <li>ACPNY Jamaica Estates · 180-05 Hillside Avenue, Jamaica, NY 11432</li>
+            <li>ACPNY Elmhurst · 88-31 55th Avenue, Elmhurst, NY 11373</li>
+            <li>Bayside · 213-02 Northern Boulevard, Bayside, NY 11361</li>
+            <li>Astoria · 29-16 Astoria Boulevard, Astoria, NY 11102</li>
+            <li>Kew Gardens · 80-02 Kew Gardens Road, Kew Gardens, NY 11415</li>
+            <li>Flushing Downtown · 135-28 37th Avenue, Flushing, NY 11354</li>
+          </ul>
+
+          <p><strong>Kote nan Manhattan</strong></p>
+          <ul>
+            <li>East 77th Street · 61 East 77th Street, New York, NY 10075</li>
+            <li>East 66th Street · 400 East 66th Street, New York, NY 10065</li>
+            <li>Park Avenue · 525 Park Avenue, New York, NY 10065</li>
+            <li>Columbus Circle · 5 Columbus Circle, New York, NY 10019</li>
+            <li>Madison Avenue · 240 Madison Avenue, New York, NY 10016</li>
+          </ul>
+
+          <p><strong>Kote nan Long Island</strong></p>
+          <ul>
+            <li>Elmont · 1390 Hempstead Turnpike, Elmont, NY 11003</li>
+            <li>Valley Stream · 260 Sunrise Highway, Valley Stream, NY 11581</li>
+            <li>Hewlett · 1137 Broadway, Hewlett, NY 11557</li>
+            <li>Lake Success · 1991 Marcus Avenue, New Hyde Park, NY 11042</li>
+            <li>Great Neck · 907 Northern Boulevard, Great Neck, NY 11021</li>
+          </ul>
+        </div>
+
+        <div class="pr-location-group">
+          <h3>Jamaica Hospital Medical Center — Radyoloji</h3>
+          <p>Pratik pou pasyan ki suiv nan biwo Jamaica ACC nou an. Pou pwograme, rele Sant Aksè pou Pasyan JHMC nan <a href="tel:+17182067110">(718) 206-7110</a>.</p>
+          <ul>
+            <li><strong>Kanpis prensipal JHMC</strong><br />8900 Van Wyck Expressway, Jamaica, NY 11418</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="pr-section-title">Kesyon?</h2>
+        <p>Rele kote biwo ou a pou kesyon ki pa ijan:</p>
+        <ul class="pr-office-list">
+          <li><strong>NYU Langone Laurelton</strong> · <a href="tel:+16465014950">646-501-4950</a></li>
+          <li><strong>NYU Orthopedic, Woodside</strong> · <a href="tel:+19294293222">929-429-3222</a></li>
+          <li><strong>NYU Orthopedic, Richmond Hill</strong> · <a href="tel:+17182066923">718-206-6923</a></li>
+          <li><strong>Jamaica Hospital Ambulatory Care Center (ACC)</strong> · <a href="tel:+17183010720">718-301-0720</a></li>
+        </ul>
+        <p>Gade <a href="../offices.pdf">enfòmasyon kontak biwo nou yo</a> pou adrès ak nimewo faks.</p>
+      </section>
+
+    </div>
+
+    <footer class="pr-footer">
+      <div class="pr-footer-inner">
+        <p><strong>Pou ijans medikal, rele 911.</strong></p>
+        <p>Pou kesyon ki pa ijan, rele biwo a nan <a href="tel:+16465014950">646-501-4950</a>.</p>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PR_MAP_DATA={offices:[{"n":"NYU Langone Laurelton","a":"228-02 Merrick Blvd, Laurelton, NY 11413","p":"646-501-4950","c":[40.67662,-73.74215]},{"n":"NYU Orthopedic, Woodside","a":"53-14 Roosevelt Ave, Woodside, NY 11377","p":"646-501-4950","c":[40.74584,-73.90096]},{"n":"NYU Orthopedic, Richmond Hill","a":"134-20 Jamaica Ave, Richmond Hill, NY 11418","p":"646-501-4950","c":[40.69973,-73.83199]},{"n":"Jamaica Hospital ACC","a":"132-47 Metropolitan Ave, Jamaica, NY 11418","p":"646-501-4950","c":[40.70293,-73.81867]}],points:[{"n":"NYU Langone Tisch (660 First Ave)","a":"660 First Ave, New York, NY 10016","p":"212-263-8868","c":[40.7437,-73.9744]},{"n":"NYU Langone Ambulatory Care East 41st","a":"222 E 41st St, New York, NY 10017","p":"212-263-8868","c":[40.7493,-73.9741]},{"n":"NYU Langone Cobble Hill","a":"200 Atlantic Ave, Brooklyn, NY 11201","p":"929-455-3100","c":[40.6905,-73.9919]},{"n":"NYU Langone Ambulatory Care Rego Park","a":"97-85 Queens Blvd, Rego Park, NY 11374","p":"516-222-2022","c":[40.7289,-73.8582]},{"n":"NYU Langone Hospital—Long Island (Mineola)","a":"259 First St, Mineola, NY 11501","p":"516-222-2022","c":[40.7475,-73.6403]},{"n":"Lenox Hill Radiology — ACPNY Laurelton","a":"231-35 Merrick Blvd, Laurelton, NY 11413","p":"(718) 544-5151","c":[40.6755,-73.7405]},{"n":"Lenox Hill Radiology — Forest Hills","a":"96-10 Metropolitan Ave, Forest Hills, NY 11375","p":"(718) 544-5151","c":[40.7178,-73.8531]},{"n":"Lenox Hill Radiology — Jamaica Estates","a":"88-08 179th St, Jamaica, NY 11432","p":"(718) 544-5151","c":[40.7129,-73.7833]},{"n":"Lenox Hill Radiology — ACPNY Jamaica Estates","a":"180-05 Hillside Ave, Jamaica, NY 11432","p":"(718) 544-5151","c":[40.7141,-73.7813]},{"n":"Lenox Hill Radiology — ACPNY Elmhurst","a":"88-31 55th Ave, Elmhurst, NY 11373","p":"(718) 544-5151","c":[40.7405,-73.8731]},{"n":"Lenox Hill Radiology — Bayside","a":"213-02 Northern Blvd, Bayside, NY 11361","p":"(718) 544-5151","c":[40.7642,-73.7679]},{"n":"Lenox Hill Radiology — Astoria","a":"29-16 Astoria Blvd, Astoria, NY 11102","p":"(718) 544-5151","c":[40.7716,-73.9259]},{"n":"Lenox Hill Radiology — Kew Gardens","a":"80-02 Kew Gardens Rd, Kew Gardens, NY 11415","p":"(718) 544-5151","c":[40.7077,-73.8311]},{"n":"Lenox Hill Radiology — Flushing Downtown","a":"135-28 37th Ave, Flushing, NY 11354","p":"(718) 544-5151","c":[40.7607,-73.8307]},{"n":"Lenox Hill Radiology — East 77th Street","a":"61 E 77th St, New York, NY 10075","p":"(212) 772-3111","c":[40.7748,-73.9637]},{"n":"Lenox Hill Radiology — East 66th Street","a":"400 E 66th St, New York, NY 10065","p":"(212) 772-3111","c":[40.7639,-73.9591]},{"n":"Lenox Hill Radiology — Park Avenue","a":"525 Park Ave, New York, NY 10065","p":"(212) 772-3111","c":[40.7660,-73.9684]},{"n":"Lenox Hill Radiology — Columbus Circle","a":"5 Columbus Circle, New York, NY 10019","p":"(212) 772-3111","c":[40.7681,-73.9819]},{"n":"Lenox Hill Radiology — Madison Avenue","a":"240 Madison Ave, New York, NY 10016","p":"(212) 772-3111","c":[40.7521,-73.9810]},{"n":"Lenox Hill Radiology — Elmont","a":"1390 Hempstead Turnpike, Elmont, NY 11003","p":"(631) 277-1600","c":[40.7050,-73.7115]},{"n":"Lenox Hill Radiology — Valley Stream","a":"260 Sunrise Hwy, Valley Stream, NY 11581","p":"(631) 277-1600","c":[40.6610,-73.7100]},{"n":"Lenox Hill Radiology — Hewlett","a":"1137 Broadway, Hewlett, NY 11557","p":"(631) 277-1600","c":[40.6373,-73.6948]},{"n":"Lenox Hill Radiology — Lake Success","a":"1991 Marcus Ave, New Hyde Park, NY 11042","p":"(631) 277-1600","c":[40.7689,-73.6981]},{"n":"Lenox Hill Radiology — Great Neck","a":"907 Northern Blvd, Great Neck, NY 11021","p":"(631) 277-1600","c":[40.7793,-73.7268]},{"n":"Jamaica Hospital Medical Center","a":"8900 Van Wyck Expressway, Jamaica, NY 11418","p":"(718) 206-7110","c":[40.7011,-73.8156]}],pointType:"imaging",labels:{"office":"Biwo Dr. Barrera","point":"Sant imajri","call":"Rele","directions":"Direksyon"}};</script>
+  <script src="../pr-map.js" defer></script>
+  <script src="../../script.js"></script>
+</body>
+</html>
