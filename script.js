@@ -22,6 +22,58 @@
 
 
 // ----------------------------------------------------------
+// 1b. PATIENT RESOURCES DROPDOWN — inject submenu under the
+//     "Patient Resources" nav link on every page so users can
+//     jump straight to a leaf destination without going through
+//     the hub.
+// ----------------------------------------------------------
+(function initPatientResourcesDropdown() {
+  const ITEMS = [
+    { label: 'Overview',           href: '/patient-resources/' },
+    { label: 'Common Conditions',  href: '/patient-resources/conditions/' },
+    { label: 'After Surgery',      href: '/patient-resources/recovery/' },
+    { label: 'Surgery Scheduling', href: '/patient-resources/surgery-scheduling/' },
+    { label: 'Hand Therapy',       href: '/patient-resources/hand-therapy/' },
+    { label: 'Nerve Study (EMG)',  href: '/patient-resources/emg/' },
+    { label: 'Imaging',            href: '/patient-resources/imaging/' },
+  ];
+
+  function isPatientResourcesLink(a) {
+    return /patient[\s-]?resources/i.test((a.textContent || '').trim());
+  }
+
+  function makeList(className) {
+    const ul = document.createElement('ul');
+    ul.className = className;
+    ITEMS.forEach(item => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = item.href;
+      a.textContent = item.label;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    return ul;
+  }
+
+  document.querySelectorAll('#main-nav .nav-links > li > a').forEach(a => {
+    if (!isPatientResourcesLink(a)) return;
+    const li = a.parentElement;
+    if (li.classList.contains('has-dropdown')) return;
+    li.classList.add('has-dropdown');
+    li.appendChild(makeList('nav-dropdown'));
+  });
+
+  document.querySelectorAll('#main-nav .mobile-menu ul > li > a').forEach(a => {
+    if (!isPatientResourcesLink(a)) return;
+    const li = a.parentElement;
+    if (li.querySelector('.mobile-submenu')) return;
+    li.appendChild(makeList('mobile-submenu'));
+  });
+})();
+
+
+// ----------------------------------------------------------
 // 2. HAMBURGER — Mobile menu toggle
 // ----------------------------------------------------------
 (function initMobileMenu() {

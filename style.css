@@ -177,6 +177,77 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
+/* Patient Resources dropdown — desktop */
+.nav-links li.has-dropdown {
+  position: relative;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 240px;
+  background: rgba(248, 247, 244, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+/* Invisible hover bridge so the cursor can travel from the
+   nav link down to the panel without closing the dropdown. */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 10px;
+}
+
+.nav-links li.has-dropdown:hover .nav-dropdown,
+.nav-links li.has-dropdown:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown li {
+  white-space: nowrap;
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--color-text);
+}
+
+.nav-dropdown a::after {
+  display: none;
+}
+
+.nav-dropdown a:hover {
+  color: var(--color-accent);
+  background: rgba(0, 0, 0, 0.035);
+}
+
 /* Hamburger button */
 .hamburger {
   display: none;
@@ -250,6 +321,28 @@ h1, h2, h3, h4 {
 }
 
 .mobile-menu a:hover {
+  color: var(--color-accent);
+}
+
+/* Patient Resources submenu — mobile (inline expanded under the parent link) */
+.mobile-submenu {
+  list-style: none;
+  margin: 0.75rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.mobile-submenu a {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  font-weight: 300;
+  color: var(--color-muted);
+}
+
+.mobile-submenu a:hover {
   color: var(--color-accent);
 }
 
