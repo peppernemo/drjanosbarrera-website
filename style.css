@@ -2041,3 +2041,30 @@ footer {
   color: var(--color-muted);
   font-size: 0.95rem;
 }
+
+
+/* ----------------------------------------------------------
+   SCRIPT-SPECIFIC FONTS for translated pages.
+   The default display/body fonts (Cormorant Garamond / Inter)
+   have no Bengali, Gurmukhi, or CJK glyphs, so override the
+   font tokens per <html lang>. The matching Noto font <link>
+   is loaded in each translated page's <head>.
+   ---------------------------------------------------------- */
+html[lang="bn"] { --font-display: 'Noto Serif Bengali', Georgia, serif;
+                  --font-body: 'Noto Sans Bengali', system-ui, sans-serif; }
+html[lang="pa"] { --font-display: 'Noto Sans Gurmukhi', system-ui, sans-serif;
+                  --font-body: 'Noto Sans Gurmukhi', system-ui, sans-serif; }
+html[lang="zh"] { --font-display: 'Noto Serif SC', Georgia, serif;
+                  --font-body: 'Noto Sans SC', system-ui, sans-serif; }
+
+/* Translation notice banner (AI-translated pages) */
+.pr-translation-notice {
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-bottom: var(--space-md);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}

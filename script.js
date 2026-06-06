@@ -87,6 +87,12 @@
           empty: 'Sin resultados. Pruebe otra palabra.' },
     ht: { label: 'Chèche', placeholder: 'Chèche kondisyon, rekiperasyon, pwogramasyon…',
           empty: 'Pa gen rezilta. Eseye yon lòt mo.' },
+    bn: { label: 'খুঁজুন', placeholder: 'রোগ, সুস্থতা, সময়সূচি খুঁজুন…',
+          empty: 'কোনো ফলাফল নেই। অন্য শব্দ চেষ্টা করুন।' },
+    pa: { label: 'ਖੋਜੋ', placeholder: 'ਰੋਗ, ਰਿਕਵਰੀ, ਸਮਾਂ-ਸੂਚੀ ਖੋਜੋ…',
+          empty: 'ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ। ਕੋਈ ਹੋਰ ਸ਼ਬਦ ਅਜ਼ਮਾਓ।' },
+    zh: { label: '搜索', placeholder: '搜索病症、康复、预约…',
+          empty: '没有匹配结果。请换个词试试。' },
   }[lang] || { label: 'Search', placeholder: 'Search…', empty: 'No matches.' };
 
   const SEARCH_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'

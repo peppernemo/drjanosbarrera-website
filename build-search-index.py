@@ -23,10 +23,9 @@ def clean(s):
 
 
 def lang_of(fn):
-    if fn.endswith("-es.html"):
-        return "es"
-    if fn.endswith("-ht.html"):
-        return "ht"
+    for code in ("es", "ht", "bn", "pa", "zh"):
+        if fn.endswith("-%s.html" % code):
+            return code
     return "en"
 
 
