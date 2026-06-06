@@ -1887,3 +1887,157 @@ footer {
 
 .pr-map-popup strong { display: block; margin-bottom: 2px; }
 .pr-map-popup a { color: var(--color-accent, #1B3A5C); }
+
+
+/* ----------------------------------------------------------
+   SITE SEARCH (injected by script.js)
+   Trigger button lives in the nav (desktop) and mobile menu;
+   overlay is appended to <body>.
+   ---------------------------------------------------------- */
+
+/* Search icon shared shape */
+.nav-search-btn svg,
+.site-search-lead svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* --- Desktop trigger (inside .nav-links) --- */
+.nav-search-item { display: flex; align-items: center; }
+
+.nav-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  transition: color 0.2s ease;
+}
+
+.nav-search-btn svg { width: 16px; height: 16px; }
+.nav-search-btn:hover { color: var(--color-accent); }
+
+/* --- Mobile trigger (inside .mobile-menu) --- */
+.mobile-menu .nav-search-btn {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0;
+  gap: 0.6rem;
+  color: var(--color-text);
+}
+.mobile-menu .nav-search-btn svg { width: 1.6rem; height: 1.6rem; }
+.mobile-menu .nav-search-btn:hover { color: var(--color-accent); }
+
+/* --- Overlay --- */
+.site-search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(26, 26, 26, 0.45);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.site-search-overlay[hidden] { display: none; }
+.site-search-overlay.open { opacity: 1; }
+
+.site-search-panel {
+  width: min(640px, 92vw);
+  margin-top: 11vh;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: transform 0.18s var(--ease-out);
+}
+.site-search-overlay.open .site-search-panel { transform: translateY(0); }
+
+.site-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.site-search-lead { display: inline-flex; color: var(--color-muted); }
+.site-search-lead svg { width: 20px; height: 20px; }
+
+.site-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+.site-search-input::placeholder { color: var(--color-muted); }
+
+.site-search-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-muted);
+  padding: 0 0.25rem;
+}
+.site-search-close:hover { color: var(--color-accent); }
+
+.site-search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  max-height: min(60vh, 460px);
+  overflow-y: auto;
+}
+.site-search-result a {
+  display: block;
+  padding: 0.6rem 1.1rem;
+  text-decoration: none;
+  color: var(--color-text);
+}
+.site-search-result.active,
+.site-search-result a:focus {
+  background: var(--color-accent-light);
+  outline: none;
+}
+.ssr-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+.ssr-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.site-search-empty {
+  margin: 0;
+  padding: 1.1rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
