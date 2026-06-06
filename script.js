@@ -125,7 +125,7 @@
       '<div class="site-search-panel" role="dialog" aria-modal="true" aria-label="' + T.label + '">'
       + '<div class="site-search-box">'
       + '<span class="site-search-lead">' + SEARCH_SVG + '</span>'
-      + '<input type="search" class="site-search-input" autocomplete="off" spellcheck="false" '
+      + '<input type="text" class="site-search-input" autocomplete="off" spellcheck="false" '
       + 'placeholder="' + T.placeholder + '" aria-label="' + T.label + '" />'
       + '<button type="button" class="site-search-close" aria-label="Close">&times;</button>'
       + '</div>'
