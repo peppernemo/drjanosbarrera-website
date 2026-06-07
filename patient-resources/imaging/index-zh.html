@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../style.css?v=map1" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <!-- Privacy-friendly analytics by Plausible -->
@@ -37,10 +38,10 @@
         <li><a href="../../#appointments">Appointments</a></li>
         <li class="has-dropdown"><a href="../" style="color: var(--color-accent);">Patient Resources</a>
           <ul class="nav-dropdown" role="list">
-            <li><a href="/patient-resources/conditions/">Common Conditions</a></li>
-            <li><a href="/patient-resources/recovery/">After Surgery &amp; Recovery</a></li>
-            <li><a href="/patient-resources/scheduling/">Scheduling &amp; Offices</a></li>
-            <li><a href="/patient-resources/handouts/">Printable Handouts</a></li>
+            <li><a href="/patient-resources/conditions/index-zh.html">常见手部疾病</a></li>
+            <li><a href="/patient-resources/recovery/">术后与康复</a></li>
+            <li><a href="/patient-resources/scheduling/index-zh.html">预约与诊所</a></li>
+            <li><a href="/patient-resources/handouts/index-zh.html">可打印资料</a></li>
           </ul>
         </li>
       </ul>
@@ -56,10 +57,10 @@
         <li><a href="../../#appointments">Appointments</a></li>
         <li><a href="../" style="color: var(--color-accent);">Patient Resources</a>
           <ul class="mobile-submenu" role="list">
-            <li><a href="/patient-resources/conditions/">Common Conditions</a></li>
-            <li><a href="/patient-resources/recovery/">After Surgery &amp; Recovery</a></li>
-            <li><a href="/patient-resources/scheduling/">Scheduling &amp; Offices</a></li>
-            <li><a href="/patient-resources/handouts/">Printable Handouts</a></li>
+            <li><a href="/patient-resources/conditions/index-zh.html">常见手部疾病</a></li>
+            <li><a href="/patient-resources/recovery/">术后与康复</a></li>
+            <li><a href="/patient-resources/scheduling/index-zh.html">预约与诊所</a></li>
+            <li><a href="/patient-resources/handouts/index-zh.html">可打印资料</a></li>
           </ul>
         </li>
       </ul>
@@ -69,65 +70,67 @@
   <main class="pr-page">
 
     <div class="pr-header">
-      <a href="../" class="pr-back">← Patient Resources</a>
+      <a href="../index-zh.html" class="pr-back">← 患者资源</a>
       <div class="pr-lang-group">
-        <a href="index.html" class="active">EN</a>
+        <a href="index.html">EN</a>
         <a href="index-es.html">ES</a>
         <a href="index-ht.html">Kreyòl</a>
         <a href="index-bn.html">বাংলা</a>
         <a href="index-pa.html">ਪੰਜਾਬੀ</a>
-        <a href="index-zh.html">中文</a>
+        <a href="index-zh.html" class="active">中文</a>
       </div>
     </div>
 
     <div class="pr-hero">
-      <p class="pr-eyebrow">Imaging</p>
-      <h1>Scheduling Your Imaging Study</h1>
-      <p class="pr-subtitle">MRI, ultrasound, and CT scans give your doctor a detailed look at the bones, nerves, and soft tissues of your hand and arm.</p>
+      <p class="pr-eyebrow">影像检查</p>
+      <h1>预约您的影像检查</h1>
+      <p class="pr-subtitle">核磁共振、超声和 CT 扫描让您的医生详细查看手部和手臂的骨骼、神经及软组织。</p>
     </div>
 
     <div class="pr-content">
 
+      <div class="pr-translation-notice">本页面为方便您而自动翻译。如有任何疑问，请与我们的诊所联系。</div>
+
       <section>
-        <h2>What kinds of imaging are there?</h2>
+        <h2>有哪些影像检查类型？</h2>
         <ul>
-          <li><strong>MRI (Magnetic Resonance Imaging):</strong> uses a magnet to create detailed pictures of soft tissues — nerves, tendons, ligaments, and the brachial plexus. Often used for unexplained pain, suspected ligament or tendon tears, mass evaluation, and nerve compression that is not clearly seen on other tests.</li>
-          <li><strong>Ultrasound:</strong> uses sound waves to look at superficial structures in real time. Useful for nerves, tendons, fluid collections, and small masses. Painless and quick.</li>
-          <li><strong>CT (Computed Tomography):</strong> uses X-rays to build a 3D picture of bone. Often used for complex fractures, suspected scaphoid nonunion, or surgical planning.</li>
+          <li><strong>核磁共振 (MRI)：</strong> 利用磁场生成软组织——神经、肌腱、韧带及臂丛——的详细图像。常用于不明原因疼痛、疑似韧带或肌腱撕裂、肿块评估，以及其他检查无法清楚显示的神经压迫。</li>
+          <li><strong>超声：</strong> 利用声波实时观察浅表结构。适用于神经、肌腱、积液和小肿块。无痛且快速。</li>
+          <li><strong>CT（计算机断层扫描）：</strong> 利用 X 射线构建骨骼的三维图像。常用于复杂骨折、疑似舟状骨骨不连或手术规划。</li>
         </ul>
-        <p>Dr. Barrera will tell you which type of imaging he is ordering and why. You must have a written order before scheduling.</p>
+        <p>Barrera 医生会告诉您他开的是哪种影像检查以及原因。预约前您必须持有书面医嘱。</p>
       </section>
 
       <section>
-        <h2>For advanced or complex studies</h2>
-        <p>For specialized nerve and brachial plexus imaging, Dr. Barrera works closely with the following specialists. If your order is for one of these studies, request the named physician when you schedule.</p>
+        <h2>针对高级或复杂的检查</h2>
+        <p>对于专门的神经和臂丛影像检查，Barrera 医生与以下专家密切合作。如果您的医嘱是其中一项检查，请在预约时指定该医生。</p>
         <ul>
-          <li><strong>Matthew Breen, MD</strong> — brachial plexus and peripheral nerve MRI<br />NYU Langone Radiology Associates · 550 1st Avenue, 2nd Floor, New York, NY 10016 · <a href="tel:+12122635230">(212) 263-5230</a></li>
-          <li><strong>Ronald Adler, MD</strong> — advanced nerve ultrasound (brachial plexus, peripheral nerve)<br />333 East 38th Street, New York, NY 10016 · <a href="tel:+16465017440">(646) 501-7440</a></li>
+          <li><strong>Matthew Breen, MD</strong> —— 臂丛及周围神经核磁共振<br />NYU Langone Radiology Associates · 550 1st Avenue, 2nd Floor, New York, NY 10016 · <a href="tel:+12122635230">(212) 263-5230</a></li>
+          <li><strong>Ronald Adler, MD</strong> —— 高级神经超声（臂丛、周围神经）<br />333 East 38th Street, New York, NY 10016 · <a href="tel:+16465017440">(646) 501-7440</a></li>
         </ul>
       </section>
 
       <section>
         <h2>How to schedule</h2>
         <ul>
-          <li>You must have a written order from Dr. Barrera before scheduling.</li>
-          <li>Choose an imaging network below and call the scheduling line for your region.</li>
-          <li>If you have difficulty scheduling, please call your office location (numbers listed below) and we will do our best to assist you.</li>
+          <li>预约前您必须持有 Barrera 医生的书面医嘱。</li>
+          <li>请在下方选择一个影像网络，并拨打您所在地区的预约电话。</li>
+          <li>如果预约有困难，请致电您的诊所（电话见下方），我们会尽力协助您。</li>
         </ul>
       </section>
 
       <section class="pr-map-section">
-        <h2>Map of locations</h2>
-        <p>Dr. Barrera's offices are shown in blue. Imaging centers are shown in purple. Click any pin for details and directions.</p>
+        <h2>位置地图</h2>
+        <p>Barrera 医生的诊所以蓝色显示。影像中心以紫色显示。点击任意图钉查看详情和路线。</p>
         <div class="pr-map-wrap"><div id="pr-map" role="img" aria-label="Map of Dr. Barrera's offices and imaging centers"></div></div>
         <div class="pr-map-legend">
-          <span class="pr-map-legend-item"><span class="pr-map-dot office"></span> Dr. Barrera office</span>
-          <span class="pr-map-legend-item"><span class="pr-map-dot imaging"></span> Imaging center</span>
+          <span class="pr-map-legend-item"><span class="pr-map-dot office"></span> Barrera 医生诊所</span>
+          <span class="pr-map-legend-item"><span class="pr-map-dot imaging"></span> 影像中心</span>
         </div>
       </section>
 
       <section>
-        <h2>Imaging centers</h2>
+        <h2>影像中心</h2>
 
         <div class="pr-location-group">
           <h3>NYU Langone Imaging</h3>
@@ -195,23 +198,23 @@
       </section>
 
       <section>
-        <h2 class="pr-section-title">Questions?</h2>
-        <p>Call your office location for non-urgent questions:</p>
+        <h2 class="pr-section-title">有疑问？</h2>
+        <p>非紧急问题，请致电您的诊所：</p>
         <ul class="pr-office-list">
           <li><strong>NYU Langone Laurelton</strong> · <a href="tel:+16465014950">646-501-4950</a></li>
           <li><strong>NYU Orthopedic, Woodside</strong> · <a href="tel:+19294293222">929-429-3222</a></li>
           <li><strong>NYU Orthopedic, Richmond Hill</strong> · <a href="tel:+17182066923">718-206-6923</a></li>
           <li><strong>Jamaica Hospital Ambulatory Care Center (ACC)</strong> · <a href="tel:+17183010720">718-301-0720</a></li>
         </ul>
-        <p>See our <a href="../offices.pdf">office contact information</a> for addresses and fax numbers.</p>
+        <p>请查看我们的<a href="../offices.pdf">诊所联系信息</a>以获取地址和传真号码。</p>
       </section>
 
     </div>
 
     <footer class="pr-footer">
       <div class="pr-footer-inner">
-        <p><strong>For medical emergencies, call 911.</strong></p>
-        <p>For non-urgent questions, please call your office location.</p>
+        <p><strong>如遇医疗紧急情况，请拨打 911。</strong></p>
+        <p>非紧急问题，请致电您的诊所。</p>
       </div>
     </footer>
 
@@ -219,7 +222,7 @@
 
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script>window.PR_MAP_DATA={offices:[{"n":"NYU Langone Laurelton","a":"228-02 Merrick Blvd, Laurelton, NY 11413","p":"646-501-4950","c":[40.67662,-73.74215]},{"n":"NYU Orthopedic, Woodside","a":"53-14 Roosevelt Ave, Woodside, NY 11377","p":"646-501-4950","c":[40.74584,-73.90096]},{"n":"NYU Orthopedic, Richmond Hill","a":"134-20 Jamaica Ave, Richmond Hill, NY 11418","p":"646-501-4950","c":[40.69973,-73.83199]},{"n":"Jamaica Hospital ACC","a":"132-47 Metropolitan Ave, Jamaica, NY 11418","p":"646-501-4950","c":[40.70293,-73.81867]}],points:[{"n":"Matthew Breen, MD — plexus / nerve MRI","a":"550 1st Ave, 2nd Floor, New York, NY 10016","p":"(212) 263-5230","c":[40.7407,-73.9748]},{"n":"Ronald Adler, MD — advanced nerve ultrasound","a":"333 E 38th St, New York, NY 10016","p":"(646) 501-7440","c":[40.7466,-73.9744]},{"n":"NYU Langone Tisch (660 First Ave)","a":"660 First Ave, New York, NY 10016","p":"212-263-8868","c":[40.7437,-73.9744]},{"n":"NYU Langone Ambulatory Care East 41st","a":"222 E 41st St, New York, NY 10017","p":"212-263-8868","c":[40.7493,-73.9741]},{"n":"NYU Langone Cobble Hill","a":"200 Atlantic Ave, Brooklyn, NY 11201","p":"929-455-3100","c":[40.6905,-73.9919]},{"n":"NYU Langone Ambulatory Care Rego Park","a":"97-85 Queens Blvd, Rego Park, NY 11374","p":"516-222-2022","c":[40.7289,-73.8582]},{"n":"NYU Langone Hospital—Long Island (Mineola)","a":"259 First St, Mineola, NY 11501","p":"516-222-2022","c":[40.7475,-73.6403]},{"n":"Lenox Hill Radiology — ACPNY Laurelton","a":"231-35 Merrick Blvd, Laurelton, NY 11413","p":"(718) 544-5151","c":[40.6755,-73.7405]},{"n":"Lenox Hill Radiology — Forest Hills","a":"96-10 Metropolitan Ave, Forest Hills, NY 11375","p":"(718) 544-5151","c":[40.7178,-73.8531]},{"n":"Lenox Hill Radiology — Jamaica Estates","a":"88-08 179th St, Jamaica, NY 11432","p":"(718) 544-5151","c":[40.7129,-73.7833]},{"n":"Lenox Hill Radiology — ACPNY Jamaica Estates","a":"180-05 Hillside Ave, Jamaica, NY 11432","p":"(718) 544-5151","c":[40.7141,-73.7813]},{"n":"Lenox Hill Radiology — ACPNY Elmhurst","a":"88-31 55th Ave, Elmhurst, NY 11373","p":"(718) 544-5151","c":[40.7405,-73.8731]},{"n":"Lenox Hill Radiology — Bayside","a":"213-02 Northern Blvd, Bayside, NY 11361","p":"(718) 544-5151","c":[40.7642,-73.7679]},{"n":"Lenox Hill Radiology — Astoria","a":"29-16 Astoria Blvd, Astoria, NY 11102","p":"(718) 544-5151","c":[40.7716,-73.9259]},{"n":"Lenox Hill Radiology — Kew Gardens","a":"80-02 Kew Gardens Rd, Kew Gardens, NY 11415","p":"(718) 544-5151","c":[40.7077,-73.8311]},{"n":"Lenox Hill Radiology — Flushing Downtown","a":"135-28 37th Ave, Flushing, NY 11354","p":"(718) 544-5151","c":[40.7607,-73.8307]},{"n":"Lenox Hill Radiology — East 77th Street","a":"61 E 77th St, New York, NY 10075","p":"(212) 772-3111","c":[40.7748,-73.9637]},{"n":"Lenox Hill Radiology — East 66th Street","a":"400 E 66th St, New York, NY 10065","p":"(212) 772-3111","c":[40.7639,-73.9591]},{"n":"Lenox Hill Radiology — Park Avenue","a":"525 Park Ave, New York, NY 10065","p":"(212) 772-3111","c":[40.7660,-73.9684]},{"n":"Lenox Hill Radiology — Columbus Circle","a":"5 Columbus Circle, New York, NY 10019","p":"(212) 772-3111","c":[40.7681,-73.9819]},{"n":"Lenox Hill Radiology — Madison Avenue","a":"240 Madison Ave, New York, NY 10016","p":"(212) 772-3111","c":[40.7521,-73.9810]},{"n":"Lenox Hill Radiology — Elmont","a":"1390 Hempstead Turnpike, Elmont, NY 11003","p":"(631) 277-1600","c":[40.7050,-73.7115]},{"n":"Lenox Hill Radiology — Valley Stream","a":"260 Sunrise Hwy, Valley Stream, NY 11581","p":"(631) 277-1600","c":[40.6610,-73.7100]},{"n":"Lenox Hill Radiology — Hewlett","a":"1137 Broadway, Hewlett, NY 11557","p":"(631) 277-1600","c":[40.6373,-73.6948]},{"n":"Lenox Hill Radiology — Lake Success","a":"1991 Marcus Ave, New Hyde Park, NY 11042","p":"(631) 277-1600","c":[40.7689,-73.6981]},{"n":"Lenox Hill Radiology — Great Neck","a":"907 Northern Blvd, Great Neck, NY 11021","p":"(631) 277-1600","c":[40.7793,-73.7268]},{"n":"Jamaica Hospital Medical Center","a":"8900 Van Wyck Expressway, Jamaica, NY 11418","p":"(718) 206-7110","c":[40.7011,-73.8156]}],pointType:"imaging",labels:{"office":"Dr. Barrera office","point":"Imaging center","call":"Call","directions":"Directions"}};</script>
+  <script>window.PR_MAP_DATA={offices:[{"n":"NYU Langone Laurelton","a":"228-02 Merrick Blvd, Laurelton, NY 11413","p":"646-501-4950","c":[40.67662,-73.74215]},{"n":"NYU Orthopedic, Woodside","a":"53-14 Roosevelt Ave, Woodside, NY 11377","p":"646-501-4950","c":[40.74584,-73.90096]},{"n":"NYU Orthopedic, Richmond Hill","a":"134-20 Jamaica Ave, Richmond Hill, NY 11418","p":"646-501-4950","c":[40.69973,-73.83199]},{"n":"Jamaica Hospital ACC","a":"132-47 Metropolitan Ave, Jamaica, NY 11418","p":"646-501-4950","c":[40.70293,-73.81867]}],points:[{"n":"Matthew Breen, MD — plexus / nerve MRI","a":"550 1st Ave, 2nd Floor, New York, NY 10016","p":"(212) 263-5230","c":[40.7407,-73.9748]},{"n":"Ronald Adler, MD — advanced nerve ultrasound","a":"333 E 38th St, New York, NY 10016","p":"(646) 501-7440","c":[40.7466,-73.9744]},{"n":"NYU Langone Tisch (660 First Ave)","a":"660 First Ave, New York, NY 10016","p":"212-263-8868","c":[40.7437,-73.9744]},{"n":"NYU Langone Ambulatory Care East 41st","a":"222 E 41st St, New York, NY 10017","p":"212-263-8868","c":[40.7493,-73.9741]},{"n":"NYU Langone Cobble Hill","a":"200 Atlantic Ave, Brooklyn, NY 11201","p":"929-455-3100","c":[40.6905,-73.9919]},{"n":"NYU Langone Ambulatory Care Rego Park","a":"97-85 Queens Blvd, Rego Park, NY 11374","p":"516-222-2022","c":[40.7289,-73.8582]},{"n":"NYU Langone Hospital—Long Island (Mineola)","a":"259 First St, Mineola, NY 11501","p":"516-222-2022","c":[40.7475,-73.6403]},{"n":"Lenox Hill Radiology — ACPNY Laurelton","a":"231-35 Merrick Blvd, Laurelton, NY 11413","p":"(718) 544-5151","c":[40.6755,-73.7405]},{"n":"Lenox Hill Radiology — Forest Hills","a":"96-10 Metropolitan Ave, Forest Hills, NY 11375","p":"(718) 544-5151","c":[40.7178,-73.8531]},{"n":"Lenox Hill Radiology — Jamaica Estates","a":"88-08 179th St, Jamaica, NY 11432","p":"(718) 544-5151","c":[40.7129,-73.7833]},{"n":"Lenox Hill Radiology — ACPNY Jamaica Estates","a":"180-05 Hillside Ave, Jamaica, NY 11432","p":"(718) 544-5151","c":[40.7141,-73.7813]},{"n":"Lenox Hill Radiology — ACPNY Elmhurst","a":"88-31 55th Ave, Elmhurst, NY 11373","p":"(718) 544-5151","c":[40.7405,-73.8731]},{"n":"Lenox Hill Radiology — Bayside","a":"213-02 Northern Blvd, Bayside, NY 11361","p":"(718) 544-5151","c":[40.7642,-73.7679]},{"n":"Lenox Hill Radiology — Astoria","a":"29-16 Astoria Blvd, Astoria, NY 11102","p":"(718) 544-5151","c":[40.7716,-73.9259]},{"n":"Lenox Hill Radiology — Kew Gardens","a":"80-02 Kew Gardens Rd, Kew Gardens, NY 11415","p":"(718) 544-5151","c":[40.7077,-73.8311]},{"n":"Lenox Hill Radiology — Flushing Downtown","a":"135-28 37th Ave, Flushing, NY 11354","p":"(718) 544-5151","c":[40.7607,-73.8307]},{"n":"Lenox Hill Radiology — East 77th Street","a":"61 E 77th St, New York, NY 10075","p":"(212) 772-3111","c":[40.7748,-73.9637]},{"n":"Lenox Hill Radiology — East 66th Street","a":"400 E 66th St, New York, NY 10065","p":"(212) 772-3111","c":[40.7639,-73.9591]},{"n":"Lenox Hill Radiology — Park Avenue","a":"525 Park Ave, New York, NY 10065","p":"(212) 772-3111","c":[40.7660,-73.9684]},{"n":"Lenox Hill Radiology — Columbus Circle","a":"5 Columbus Circle, New York, NY 10019","p":"(212) 772-3111","c":[40.7681,-73.9819]},{"n":"Lenox Hill Radiology — Madison Avenue","a":"240 Madison Ave, New York, NY 10016","p":"(212) 772-3111","c":[40.7521,-73.9810]},{"n":"Lenox Hill Radiology — Elmont","a":"1390 Hempstead Turnpike, Elmont, NY 11003","p":"(631) 277-1600","c":[40.7050,-73.7115]},{"n":"Lenox Hill Radiology — Valley Stream","a":"260 Sunrise Hwy, Valley Stream, NY 11581","p":"(631) 277-1600","c":[40.6610,-73.7100]},{"n":"Lenox Hill Radiology — Hewlett","a":"1137 Broadway, Hewlett, NY 11557","p":"(631) 277-1600","c":[40.6373,-73.6948]},{"n":"Lenox Hill Radiology — Lake Success","a":"1991 Marcus Ave, New Hyde Park, NY 11042","p":"(631) 277-1600","c":[40.7689,-73.6981]},{"n":"Lenox Hill Radiology — Great Neck","a":"907 Northern Blvd, Great Neck, NY 11021","p":"(631) 277-1600","c":[40.7793,-73.7268]},{"n":"Jamaica Hospital Medical Center","a":"8900 Van Wyck Expressway, Jamaica, NY 11418","p":"(718) 206-7110","c":[40.7011,-73.8156]}],pointType:"imaging",labels:{"office":"Barrera 医生诊所","point":"影像中心","call":"致电","directions":"路线"}};</script>
   <script src="../pr-map.js" defer></script>
   <script src="../../script.js"></script>
 </body>

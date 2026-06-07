@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ਕਿਵੇਂ ਤੈਅ ਕਰਨਾ ਹੈ an EMG / nerve conduction study for patients of Dr. Janos Barrera." />
+  <title>EMG / Nerve Study | Janos Barrera MD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css?v=map1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-H-yWrW2Xof4cVugH_G9Eg.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+
+  <nav id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../../" class="nav-logo">Dr. Janos Barrera</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#expertise">Expertise</a></li>
+        <li><a href="../../#procedures">Procedures</a></li>
+        <li><a href="../../#research">Research</a></li>
+        <li><a href="../../#appointments">Appointments</a></li>
+        <li class="has-dropdown"><a href="../" style="color: var(--color-accent);">Patient Resources</a>
+          <ul class="nav-dropdown" role="list">
+            <li><a href="/patient-resources/conditions/index-pa.html">ਆਮ ਰੋਗ</a></li>
+            <li><a href="/patient-resources/recovery/">ਸਰਜਰੀ ਤੋਂ ਬਾਅਦ ਅਤੇ ਰਿਕਵਰੀ</a></li>
+            <li><a href="/patient-resources/scheduling/index-pa.html">ਸਮਾਂ-ਸੂਚੀ ਅਤੇ ਦਫ਼ਤਰ</a></li>
+            <li><a href="/patient-resources/handouts/index-pa.html">ਛਾਪਣਯੋਗ ਹੈਂਡਆਊਟ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true" hidden>
+      <ul role="list">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#expertise">Expertise</a></li>
+        <li><a href="../../#procedures">Procedures</a></li>
+        <li><a href="../../#research">Research</a></li>
+        <li><a href="../../#appointments">Appointments</a></li>
+        <li><a href="../" style="color: var(--color-accent);">Patient Resources</a>
+          <ul class="mobile-submenu" role="list">
+            <li><a href="/patient-resources/conditions/index-pa.html">ਆਮ ਰੋਗ</a></li>
+            <li><a href="/patient-resources/recovery/">ਸਰਜਰੀ ਤੋਂ ਬਾਅਦ ਅਤੇ ਰਿਕਵਰੀ</a></li>
+            <li><a href="/patient-resources/scheduling/index-pa.html">ਸਮਾਂ-ਸੂਚੀ ਅਤੇ ਦਫ਼ਤਰ</a></li>
+            <li><a href="/patient-resources/handouts/index-pa.html">ਛਾਪਣਯੋਗ ਹੈਂਡਆਊਟ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="pr-page">
+
+    <div class="pr-header">
+      <a href="../index-pa.html" class="pr-back">← ਮਰੀਜ਼ਾਂ ਲਈ ਜਾਣਕਾਰੀ</a>
+      <div class="pr-lang-group">
+        <a href="index.html">EN</a>
+        <a href="index-es.html">ES</a>
+        <a href="index-ht.html">Kreyòl</a>
+        <a href="index-bn.html">বাংলা</a>
+        <a href="index-pa.html" class="active">ਪੰਜਾਬੀ</a>
+        <a href="index-zh.html">中文</a>
+      </div>
+    </div>
+
+    <div class="pr-hero">
+      <p class="pr-eyebrow">ਨਸ ਟੈਸਟ</p>
+      <h1>ਆਪਣਾ EMG / ਨਸ ਟੈਸਟ ਤੈਅ ਕਰਨਾ</h1>
+      <p class="pr-subtitle">ਨਸ ਟੈਸਟ ਤੁਹਾਡੇ ਡਾਕਟਰ ਨੂੰ ਇਹ ਮਾਪਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ ਕਿ ਤੁਹਾਡੀ ਬਾਂਹ ਦੀਆਂ ਨਸਾਂ ਕਿੰਨੀ ਚੰਗੀ ਤਰ੍ਹਾਂ ਕੰਮ ਕਰ ਰਹੀਆਂ ਹਨ।</p>
+    </div>
+
+    <div class="pr-content">
+
+      <div class="pr-translation-notice">ਇਹ ਪੰਨਾ ਤੁਹਾਡੀ ਸਹੂਲਤ ਲਈ ਆਪਣੇ-ਆਪ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਕਿਸੇ ਵੀ ਸਵਾਲ ਜਾਂ ਸ਼ੰਕੇ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਸਾਡੇ ਦਫ਼ਤਰ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।</div>
+
+      <section>
+        <h2>EMG / NCS ਕੀ ਹੈ?</h2>
+        <p>ਇਲੈਕਟ੍ਰੋਮਾਇਓਗ੍ਰਾਫੀ (EMG) ਅਤੇ ਨਰਵ ਕੰਡਕਸ਼ਨ ਸਟੱਡੀ (NCS) ਟੈਸਟ ਹਨ ਜੋ ਮਾਪਦੇ ਹਨ ਕਿ ਤੁਹਾਡੀਆਂ ਨਸਾਂ ਅਤੇ ਮਾਸਪੇਸ਼ੀਆਂ ਕਿਵੇਂ ਕੰਮ ਕਰ ਰਹੀਆਂ ਹਨ।</p>
+        <ul>
+          <li><strong>ਨਰਵ ਕੰਡਕਸ਼ਨ ਸਟੱਡੀ (NCS):</strong> ਜਾਂਚਦਾ ਹੈ ਕਿ ਤੁਹਾਡੀਆਂ ਨਸਾਂ ਦੇ ਨਾਲ ਸਿਗਨਲ ਕਿੰਨੀ ਤੇਜ਼ੀ ਅਤੇ ਕਿੰਨੀ ਚੰਗੀ ਤਰ੍ਹਾਂ ਜਾਂਦੇ ਹਨ।</li>
+          <li><strong>ਇਲੈਕਟ੍ਰੋਮਾਇਓਗ੍ਰਾਫੀ (EMG):</strong> ਤੁਹਾਡੀਆਂ ਮਾਸਪੇਸ਼ੀਆਂ ਵਿੱਚ ਬਿਜਲਈ ਗਤੀਵਿਧੀ ਮਾਪਦਾ ਹੈ।</li>
+        </ul>
+        <p>ਇਹ ਟੈਸਟ ਤੁਹਾਡੇ ਡਾਕਟਰ ਨੂੰ ਇਹ ਪਤਾ ਲਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ ਕਿ ਤੁਹਾਡੀ ਕੋਈ ਦੱਬੀ ਜਾਂ ਦਬਾਅ ਵਾਲੀ ਨਸ (ਜਿਵੇਂ ਕਾਰਪਲ ਟਨਲ ਸਿੰਡਰੋਮ ਜਾਂ ਕਿਊਬਿਟਲ ਟਨਲ ਸਿੰਡਰੋਮ) ਜਾਂ ਕੋਈ ਹੋਰ ਨਸ/ਮਾਸਪੇਸ਼ੀ ਸਮੱਸਿਆ ਹੈ ਜਾਂ ਨਹੀਂ।</p>
+      </section>
+
+      <section>
+        <h2>ਕਿਵੇਂ ਤੈਅ ਕਰਨਾ ਹੈ</h2>
+        <ul>
+          <li>ਆਪਣਾ ਟੈਸਟ ਤੈਅ ਕਰਨ ਲਈ ਹੇਠਾਂ ਦਿੱਤੇ EMG ਟੈਸਟਿੰਗ ਸੈਂਟਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।</li>
+          <li>ਜੇ ਤੈਅ ਕਰਨ ਵਿੱਚ ਮੁਸ਼ਕਲ ਹੋਵੇ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਦਫ਼ਤਰ ਨੂੰ ਕਾਲ ਕਰੋ (ਨੰਬਰ ਹੇਠਾਂ ਦਿੱਤੇ ਹਨ) ਅਤੇ ਅਸੀਂ ਤੁਹਾਡੀ ਮਦਦ ਲਈ ਪੂਰੀ ਕੋਸ਼ਿਸ਼ ਕਰਾਂਗੇ।</li>
+        </ul>
+      </section>
+
+      <section class="pr-map-section">
+        <h2>ਟਿਕਾਣਿਆਂ ਦਾ ਨਕਸ਼ਾ</h2>
+        <p>ਡਾ. ਬਰੇਰਾ ਦੇ ਦਫ਼ਤਰ ਨੀਲੇ ਰੰਗ ਵਿੱਚ ਦਿਖਾਏ ਗਏ ਹਨ। EMG ਟੈਸਟਿੰਗ ਸੈਂਟਰ ਹਰੇ ਰੰਗ ਵਿੱਚ ਦਿਖਾਏ ਗਏ ਹਨ। ਵੇਰਵੇ ਅਤੇ ਰਸਤੇ ਲਈ ਕਿਸੇ ਵੀ ਪਿੰਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ।</p>
+        <div class="pr-map-wrap"><div id="pr-map" role="img" aria-label="Map of Dr. Barrera's offices and EMG ਟੈਸਟਿੰਗ ਸੈਂਟਰ"></div></div>
+        <div class="pr-map-legend">
+          <span class="pr-map-legend-item"><span class="pr-map-dot office"></span> ਡਾ. ਬਰੇਰਾ ਦਾ ਦਫ਼ਤਰ</span>
+          <span class="pr-map-legend-item"><span class="pr-map-dot emg"></span> EMG ਟਿਕਾਣਾ</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>EMG ਟੈਸਟਿੰਗ ਸੈਂਟਰ</h2>
+
+        <div class="pr-location-group">
+          <h3>NYU Neurology</h3>
+          <p><a href="https://nyulangone.org/doctors/specialty/neurologist?sort=availability&amp;page=1&amp;treatment=electromyography" target="_blank" rel="noopener">Find an NYU neurologist offering EMG →</a></p>
+          <ul>
+            <li><strong>Kiril Kiprovski, MD</strong> — Manhattan · <em>ਜਟਿਲ ਜਾਂ ਵਿਸਤ੍ਰਿਤ EMG / NCS ਲਈ ਡਾ. ਬਰੇਰਾ ਦਾ ਪਸੰਦੀਦਾ ਮਾਹਰ</em><br />NYU Langone Neurology Associates · 222 E 41st St, 10th Floor, New York, NY 10017 · <a href="tel:+12122637744">(212) 263-7744</a></li>
+            <li><strong>Andre V. Strizhak, MD / Dora S. Pinkhasova, MD</strong> — Queens<br />NYU Langone Ambulatory Care Rego Park, 97-85 Queens Boulevard, 3rd Floor, Rego Park, NY 11374 · <a href="tel:+17182619100">(718) 261-9100</a></li>
+            <li><strong>Patrick Kwon, MD</strong> — Brooklyn<br />NYU Langone Brooklyn Medical Arts Pavilion, 8714 5th Avenue, 2nd Floor, Brooklyn, NY 11209 · <a href="tel:+17186308600">(718) 630-8600</a></li>
+          </ul>
+        </div>
+
+        <div class="pr-location-group">
+          <h3>Jamaica Hospital Medical Center</h3>
+          <p><a href="https://jamaicahospital.org/clinical-services/neurology/meet-our-team/" target="_blank" rel="noopener">JHMC Neurology team →</a></p>
+          <ul>
+            <li><strong>Nandakumar Thambirajah, MD</strong><br />13420 Jamaica Ave, Jamaica, NY 11418 · <a href="tel:+17182066742">(718) 206-6742</a></li>
+          </ul>
+        </div>
+
+        <div class="pr-location-group">
+          <h3>Hands-On EMG Testing</h3>
+          <p>Central office: <a href="tel:+18552516960">(855) 251-6960</a> · <a href="https://handsonemg.com/locations/" target="_blank" rel="noopener">handsonemg.com/locations</a></p>
+
+          <p style="margin-top: 1rem;"><strong>Queens</strong></p>
+          <ul>
+            <li>32-44 31st St., Astoria, NY 11106</li>
+            <li>220-01 Jamaica Ave., Queens Village, NY 11428</li>
+            <li>30-10 38th St., Astoria, NY 11103</li>
+            <li>36-36 33rd St., Suite 311, Astoria, NY 11106</li>
+            <li>87-09 Justice Ave., Elmhurst, NY 11373</li>
+            <li>71-60 Yellowstone Blvd., Forest Hills, NY 11375</li>
+            <li>165-50 Baisley Blvd., Jamaica, NY 11434</li>
+          </ul>
+
+          <p><strong>Brooklyn</strong></p>
+          <ul>
+            <li>32-44 31st St, Astoria, NY 11106</li>
+          </ul>
+
+          <p><strong>Long Island</strong></p>
+          <ul>
+            <li>337 Jerusalem Ave., Hicksville, NY 11801</li>
+            <li>354 Hempstead Ave., Suite 101, West Hempstead, NY 11552</li>
+            <li>1788 Middle Country Rd., Centereach, NY 11720</li>
+            <li>33 Walt Whitman Rd., Suite 240, Huntington Station, NY 11746</li>
+            <li>2 Hope Dr., Plainview, NY 11803</li>
+            <li>265 North Broadway, Hicksville, NY 11801</li>
+            <li>1605 Hillside Ave., New Hyde Park, NY 11040</li>
+            <li>341 Jerusalem Ave., Hicksville, NY 11801</li>
+          </ul>
+
+          <p><strong>Manhattan</strong></p>
+          <ul>
+            <li>160 East 32nd St., Suite 102, New York, NY 10016</li>
+            <li>1990A Lexington Ave., Suite A, New York, NY 10035</li>
+            <li>564 W. 160th St., Suite 1, New York, NY 10032</li>
+            <li>577 W. 161st St., New York, NY 10032</li>
+            <li>639 W. 185th St., New York, NY 10033</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="pr-section-title">ਸਵਾਲ?</h2>
+        <p>ਗੈਰ-ਜ਼ਰੂਰੀ ਸਵਾਲਾਂ ਲਈ ਆਪਣੇ ਦਫ਼ਤਰ ਨੂੰ ਕਾਲ ਕਰੋ:</p>
+        <ul class="pr-office-list">
+          <li><strong>NYU Langone Laurelton</strong> · <a href="tel:+16465014950">646-501-4950</a></li>
+          <li><strong>NYU Orthopedic, Woodside</strong> · <a href="tel:+19294293222">929-429-3222</a></li>
+          <li><strong>NYU Orthopedic, Richmond Hill</strong> · <a href="tel:+17182066923">718-206-6923</a></li>
+          <li><strong>Jamaica Hospital Ambulatory Care Center (ACC)</strong> · <a href="tel:+17183010720">718-301-0720</a></li>
+        </ul>
+        <p>ਪਤੇ ਅਤੇ ਫੈਕਸ ਨੰਬਰਾਂ ਲਈ ਸਾਡੀ <a href="../offices.pdf">ਦਫ਼ਤਰ ਸੰਪਰਕ ਜਾਣਕਾਰੀ</a> ਦੇਖੋ।</p>
+      </section>
+
+    </div>
+
+    <footer class="pr-footer">
+      <div class="pr-footer-inner">
+        <p><strong>ਮੈਡੀਕਲ ਐਮਰਜੈਂਸੀ ਲਈ, 911 'ਤੇ ਕਾਲ ਕਰੋ।</strong></p>
+        <p>ਗੈਰ-ਜ਼ਰੂਰੀ ਸਵਾਲਾਂ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਦਫ਼ਤਰ ਨੂੰ ਕਾਲ ਕਰੋ।</p>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.PR_MAP_DATA={offices:[{"n":"NYU Langone Laurelton","a":"228-02 Merrick Blvd, Laurelton, NY 11413","p":"646-501-4950","c":[40.67662,-73.74215]},{"n":"NYU Orthopedic, Woodside","a":"53-14 Roosevelt Ave, Woodside, NY 11377","p":"646-501-4950","c":[40.74584,-73.90096]},{"n":"NYU Orthopedic, Richmond Hill","a":"134-20 Jamaica Ave, Richmond Hill, NY 11418","p":"646-501-4950","c":[40.69973,-73.83199]},{"n":"Jamaica Hospital ACC","a":"132-47 Metropolitan Ave, Jamaica, NY 11418","p":"646-501-4950","c":[40.70293,-73.81867]}],points:[{"n":"Kiril Kiprovski, MD — preferred for complex EMG/NCS","a":"222 E 41st St, 10th Fl, New York, NY 10017","p":"(212) 263-7744","c":[40.7493,-73.9741]},{"n":"Strizhak/Pinkhasova (NYU Rego Park)","a":"97-85 Queens Blvd, Rego Park, NY 11374","p":"(718) 261-9100","c":[40.72894,-73.85824]},{"n":"Patrick Kwon, MD (NYU Brooklyn)","a":"8714 5th Ave, Brooklyn, NY 11209","p":"(718) 630-8600","c":[40.62058,-74.02732]},{"n":"Nandakumar Thambirajah, MD (JHMC)","a":"134-20 Jamaica Ave, Jamaica, NY 11418","p":"(718) 206-6742","c":[40.70037,-73.8165]},{"n":"Hands-On EMG, Astoria (31st St)","a":"32-44 31st St, Astoria, NY 11106","p":"","c":[40.76096,-73.92629]},{"n":"Hands-On EMG, Queens Village","a":"220-01 Jamaica Ave, Queens Village, NY 11428","p":"","c":[40.7278,-73.70814]},{"n":"Hands-On EMG, Astoria (38th St)","a":"30-10 38th St, Astoria, NY 11103","p":"","c":[40.764,-73.9161]},{"n":"Hands-On EMG, Astoria (33rd St)","a":"36-36 33rd St, Astoria, NY 11106","p":"","c":[40.75522,-73.92874]},{"n":"Hands-On EMG, Elmhurst","a":"87-09 Justice Ave, Elmhurst, NY 11373","p":"","c":[40.73605,-73.87231]},{"n":"Hands-On EMG, Forest Hills","a":"71-60 Yellowstone Blvd, Forest Hills, NY 11375","p":"","c":[40.72123,-73.8553]},{"n":"Hands-On EMG, Jamaica","a":"165-50 Baisley Blvd, Jamaica, NY 11434","p":"","c":[40.67915,-73.77805]},{"n":"Hands-On EMG, Hicksville (Jerusalem Ave 337)","a":"337 Jerusalem Ave, Hicksville, NY 11801","p":"","c":[40.75458,-73.52017]},{"n":"Hands-On EMG, West Hempstead","a":"354 Hempstead Ave, West Hempstead, NY 11552","p":"","c":[40.69928,-73.65111]},{"n":"Hands-On EMG, Centereach","a":"1788 Middle Country Rd, Centereach, NY 11720","p":"","c":[40.85972,-73.07592]},{"n":"Hands-On EMG, Huntington Station","a":"33 Walt Whitman Rd, Huntington Station, NY 11746","p":"","c":[40.83062,-73.41297]},{"n":"Hands-On EMG, Plainview","a":"2 Hope Dr, Plainview, NY 11803","p":"","c":[40.77622,-73.46872]},{"n":"Hands-On EMG, Hicksville (N Broadway)","a":"265 N Broadway, Hicksville, NY 11801","p":"","c":[40.77757,-73.52907]},{"n":"Hands-On EMG, New Hyde Park","a":"1605 Hillside Ave, New Hyde Park, NY 11040","p":"","c":[40.74846,-73.68515]},{"n":"Hands-On EMG, Hicksville (Jerusalem Ave 341)","a":"341 Jerusalem Ave, Hicksville, NY 11801","p":"","c":[40.7545,-73.52014]},{"n":"Hands-On EMG, Manhattan (E 32nd)","a":"160 E 32nd St, New York, NY 10016","p":"","c":[40.74458,-73.97999]},{"n":"Hands-On EMG, Manhattan (Lexington)","a":"1990 Lexington Ave, New York, NY 10035","p":"","c":[40.8023,-73.93914]},{"n":"Hands-On EMG, Manhattan (W 160th)","a":"564 W 160th St, New York, NY 10032","p":"","c":[40.83562,-73.94303]},{"n":"Hands-On EMG, Manhattan (W 161st)","a":"577 W 161st St, New York, NY 10032","p":"","c":[40.83649,-73.94231]},{"n":"Hands-On EMG, Manhattan (W 185th)","a":"639 W 185th St, New York, NY 10033","p":"","c":[40.85245,-73.93345]}],pointType:"emg",labels:{"office":"ਡਾ. ਬਰੇਰਾ ਦਾ ਦਫ਼ਤਰ","point":"EMG ਟਿਕਾਣਾ","call":"ਕਾਲ","directions":"ਰਸਤਾ"}};</script>
+  <script src="../pr-map.js" defer></script>
+  <script src="../../script.js"></script>
+</body>
+</html>
